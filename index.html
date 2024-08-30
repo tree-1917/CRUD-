@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRUDS</title>
+    <!-- Style Sheet -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Main Script -->
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <!-- ! Head Section -->
+      <div class="head">
+        <h2>curds</h2>
+        <p>Product System Mangment</p>
+      </div>
+      <!-- # Head Section -->
+      <!-- ! Input Section -->
+      <div class="input">
+        <input type="text" id="title" placeholder="title" />
+        <div class="price">
+          <input
+            type="number"
+            onkeyup="getPrice()"
+            id="price"
+            placeholder="Price"
+          />
+          <input
+            type="number"
+            onkeyup="getPrice()"
+            id="taxes"
+            placeholder="taxes"
+          />
+          <input
+            type="number"
+            onkeyup="getPrice()"
+            id="ads"
+            placeholder="ads"
+          />
+          <input
+            type="number"
+            onkeyup="getPrice()"
+            id="discount"
+            placeholder="discount"
+          />
+          <small id="total"></small>
+        </div>
+        <input type="number" id="count" placeholder="count" />
+        <input type="text" id="catagery" placeholder="catagery" />
+        <button id="submit">create</button>
+      </div>
+      <!-- # Input Section -->
+      <!-- ! Input Section -->
+      <div class="output">
+        <!-- Search Box -->
+        <div class="search-box">
+          <input
+            type="text"
+            id="search"
+            placeholder="search"
+            onkeyup="searchDate(this.value.toLowerCase())"
+          />
+          <div class="search-btns">
+            <button id="search-title" onclick=" getSearchMood(this.id)">
+              title
+            </button>
+            <button id="search-catagery" onclick=" getSearchMood(this.id)">
+              catagery
+            </button>
+          </div>
+          <div id="clear"></div>
+        </div>
+        <!-- End Search Box -->
+        <!-- Data Table -->
+        <table>
+          <thead>
+            <tr>
+              <th>id</th>
+              <th>tittle</th>
+              <th>price</th>
+              <th>ads</th>
+              <th>discount</th>
+              <th>total</th>
+              <th>catagery</th>
+              <th>update</th>
+              <th>delete</th>
+            </tr>
+          </thead>
+          <tbody id="tbody"></tbody>
+        </table>
+        <!-- End Data Table -->
+      </div>
+      <!-- # Input Section -->
+    </div>
+  </body>
+</html>
